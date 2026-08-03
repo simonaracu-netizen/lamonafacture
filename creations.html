@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Créations — LA MONAFACTURE</title>
+<meta name="description" content="Guirlandes lumineuses, abat-jours, kusudama et suspensions façonnés à la main.">
+<style>
+:root{--cream:#f7f1e8;--white:#fffdf9;--ink:#191614;--muted:#756b62;--gold:#c39a52;--gold2:#9e7534;--line:rgba(25,22,20,.12);--shadow:0 18px 48px rgba(54,39,25,.14)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%}
+header{position:sticky;top:0;z-index:50;background:rgba(247,241,232,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{width:min(100% - 32px,1080px);height:68px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:.13em;font-size:.95rem}
+nav{display:flex;gap:24px;font-size:.88rem}
+nav a:hover{color:var(--gold2)}
+.hero{position:relative;min-height:calc(100svh - 68px);display:flex;align-items:flex-end;overflow:hidden;background:#181411}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.02) brightness(.9)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(16,12,9,.08) 0%,rgba(16,12,9,.20) 42%,rgba(16,12,9,.90) 100%),radial-gradient(circle at 68% 34%,rgba(225,172,86,.22),transparent 33%)}
+.hero-content{position:relative;z-index:2;width:min(100% - 32px,1080px);margin:auto;color:#fff8ed;padding:42px 0 64px}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.67rem;color:#e8c98d;font-weight:700}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;margin:0}
+h1{max-width:850px;font-size:clamp(3.4rem,10vw,7rem);line-height:.94;letter-spacing:-.04em;margin:10px 0 18px}
+.hero-tagline{max-width:660px;margin:0;color:#efe5d9;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(1.25rem,2.5vw,2rem)}
+.hero-copy{max-width:650px;margin:18px 0 0;color:#d8cab9;font-size:1rem}
+.hero-links{display:flex;flex-wrap:wrap;gap:14px 26px;margin-top:28px}
+.hero-links a{color:#efc477;font-weight:700;border-bottom:1px solid rgba(239,196,119,.45);padding-bottom:4px}
+.collection{max-width:1080px;margin:auto;padding:92px 16px 28px}
+.collection-first{padding-top:76px}
+.section-head{max-width:760px;margin-bottom:42px}
+.section-head span{display:block;color:var(--gold2);text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:700;margin-bottom:10px}
+.section-head h2{font-size:clamp(2.8rem,6vw,5.2rem);line-height:1;margin:0 0 16px}
+.section-head p{margin:0;color:var(--muted);font-size:1.08rem;line-height:1.75}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px}
+.creation-card{background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden;border-radius:28px}
+.gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#241f1a}
+.slides{display:flex;width:100%;height:100%;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.slide{min-width:100%;margin:0;height:100%}
+.slide img{width:100%;height:100%;object-fit:cover}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(20,14,10,.38);color:white;font-size:28px;cursor:pointer}
+.prev{left:14px}.next{right:14px}
+.dots{position:absolute;bottom:14px;left:0;right:0;display:flex;justify-content:center;gap:7px}
+.dot{width:8px;height:8px;border-radius:50%;padding:0;border:1px solid white;background:transparent}
+.dot.active{background:white}
+.card-copy{padding:26px 26px 30px}
+.card-copy .eyebrow{color:var(--gold2);letter-spacing:.16em;font-size:.64rem}
+.card-copy h3{font-size:2rem;margin:6px 0 10px}
+.card-copy>p:not(.eyebrow):not(.views){color:var(--muted);line-height:1.65;margin:0}
+.views{color:var(--gold2);text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;font-weight:700;margin-top:20px}
+.manifesto{max-width:920px;margin:78px auto 0;padding:72px 24px 84px;text-align:center}
+.manifesto p{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.4rem,5vw,4.7rem);line-height:1.08;margin:0}
+.etsy-cta{display:inline-flex;min-height:50px;align-items:center;justify-content:center;margin-top:30px;padding:12px 22px;border-radius:999px;background:#d3aa62;color:#241a0e;font-weight:700}
+footer{background:#141210;color:#eee4d7;padding:48px 20px 34px;text-align:center}
+footer p{color:#b9aa99}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(min-width:760px){.nav{height:80px}.hero{min-height:calc(100vh - 80px)}}
+@media(max-width:760px){.nav{height:auto;min-height:68px;align-items:flex-start;padding:15px 0;gap:16px}nav{display:grid;gap:5px;text-align:right;font-size:.72rem}.hero-content{padding-bottom:44px}.hero-links{display:grid;gap:10px}.collection{padding:72px 16px 20px}.grid{grid-template-columns:1fr}.creation-card{border-radius:22px}.card-copy{padding:24px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="nav"><a class="brand" href="index.html">LA MONAFACTURE</a><nav><a href="index.html">Accueil</a><a href="#guir">Guirlandes</a><a href="#abat">Abat-jours</a><a href="#kusu">Suspensions</a></nav></div></header>
+<section class="hero">
+<img class="hero-bg" src="guir-08-3.jpg" alt="Guirlande lumineuse florale dans une atmosphère chaleureuse">
+<div class="hero-content">
+<p class="eyebrow">Les créations</p>
+<h1>Une seule lumière.</h1>
+<p class="hero-tagline">Mille façons de la révéler.</p>
+<p class="hero-copy">Elle traverse le papier, révèle les tissus, accroche les cristaux et transforme chaque création en une lumière singulière.</p>
+<div class="hero-links"><a href="#guir">Suspendre la lumière →</a><a href="#abat">Diffuser la lumière →</a><a href="#kusu">Refléter la lumière →</a></div>
+</div>
+</section>
+<section class="collection collection-first" id="guir"><div class="section-head reveal"><span>Les guirlandes lumineuses</span><h2>Suspendre la lumière</h2><p>Des fleurs et des formes de papier qui dessinent la lumière dans l’espace. Chaque élément est plié et assemblé à la main.</p></div><div class="grid"><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="guir-08-1.jpg" alt="Lys au crépuscule — vue 1"></figure><figure class="slide"><img loading="lazy" src="guir-08-2.jpg" alt="Lys au crépuscule — vue 2"></figure><figure class="slide"><img loading="lazy" src="guir-08-3.jpg" alt="Lys au crépuscule — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Lys au crépuscule</h3><p>Des fleurs de papier aux silhouettes libres, dessinées par une lumière chaude.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="guir-09-1.jpg" alt="Jardin nocturne — vue 1"></figure><figure class="slide"><img loading="lazy" src="guir-09-2.jpg" alt="Jardin nocturne — vue 2"></figure><figure class="slide"><img loading="lazy" src="guir-09-3.jpg" alt="Jardin nocturne — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Jardin nocturne</h3><p>Rouges, violets et ors : un jardin suspendu qui s’allume comme une constellation.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="guir-10-1.jpg" alt="Jardin tropical — vue 1"></figure><figure class="slide"><img loading="lazy" src="guir-10-2.jpg" alt="Jardin tropical — vue 2"></figure><figure class="slide"><img loading="lazy" src="guir-10-3.jpg" alt="Jardin tropical — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Jardin tropical</h3><p>Des fleurs généreuses et vibrantes, comme une végétation imaginaire dans la nuit.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="guir-11-1.jpg" alt="Cubes japonais — vue 1"></figure><figure class="slide"><img loading="lazy" src="guir-11-2.jpg" alt="Cubes japonais — vue 2"></figure><figure class="slide"><img loading="lazy" src="guir-11-3.jpg" alt="Cubes japonais — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Cubes japonais</h3><p>Une composition géométrique en papiers japonais, pensée comme une pluie de petites lanternes.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article></div></section><section class="collection" id="abat"><div class="section-head reveal"><span>Les abat-jours</span><h2>Diffuser la lumière</h2><p>Le tissu devient paysage. Éteint, il révèle sa matière et ses couleurs. Allumé, il laisse apparaître une autre image — plus chaude, plus profonde, presque secrète.</p></div><div class="grid"><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="abat-01-1.jpg" alt="Chrysanthème de minuit — vue 1"></figure><figure class="slide"><img loading="lazy" src="abat-01-2.jpg" alt="Chrysanthème de minuit — vue 2"></figure><figure class="slide"><img loading="lazy" src="abat-01-3.jpg" alt="Chrysanthème de minuit — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Chrysanthème de minuit</h3><p>Un jardin japonais qui se révèle autrement lorsque la lumière traverse le tissu.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="abat-02-1.jpg" alt="Verger secret — vue 1"></figure><figure class="slide"><img loading="lazy" src="abat-02-2.jpg" alt="Verger secret — vue 2"></figure><figure class="slide"><img loading="lazy" src="abat-02-3.jpg" alt="Verger secret — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Verger secret</h3><p>Des pommes rouges, une mésange et une lumière chaude comme un après-midi d’automne.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="abat-03-1.jpg" alt="Écailles célestes — vue 1"></figure><figure class="slide"><img loading="lazy" src="abat-03-2.jpg" alt="Écailles célestes — vue 2"></figure><figure class="slide"><img loading="lazy" src="abat-03-3.jpg" alt="Écailles célestes — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Écailles célestes</h3><p>Un motif bleu et or, graphique le jour, délicatement rayonnant le soir.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="abat-04-1.jpg" alt="Jardin indigo — vue 1"></figure><figure class="slide"><img loading="lazy" src="abat-04-2.jpg" alt="Jardin indigo — vue 2"></figure><figure class="slide"><img loading="lazy" src="abat-04-3.jpg" alt="Jardin indigo — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Jardin indigo</h3><p>Une fleur rouge surgit sur un bleu profond, entre cabinet de curiosités et jardin rêvé.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="abat-05-1.jpg" alt="Récif pastel — vue 1"></figure><figure class="slide"><img loading="lazy" src="abat-05-2.jpg" alt="Récif pastel — vue 2"></figure><figure class="slide"><img loading="lazy" src="abat-05-3.jpg" alt="Récif pastel — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Récif pastel</h3><p>Des poissons légers dans une eau poudrée, bordés d’un velours corail.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="abat-06-1.jpg" alt="Voyage impérial — vue 1"></figure><figure class="slide"><img loading="lazy" src="abat-06-2.jpg" alt="Voyage impérial — vue 2"></figure><figure class="slide"><img loading="lazy" src="abat-06-3.jpg" alt="Voyage impérial — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Voyage impérial</h3><p>Un éléphant paré traverse une nuit noire et transforme la lampe en scène miniature.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="abat-07-1.jpg" alt="Herbier nocturne — vue 1"></figure><figure class="slide"><img loading="lazy" src="abat-07-2.jpg" alt="Herbier nocturne — vue 2"></figure><figure class="slide"><img loading="lazy" src="abat-07-3.jpg" alt="Herbier nocturne — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Herbier nocturne</h3><p>Une composition florale profonde et texturée, presque picturale.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article></div></section><section class="collection" id="kusu"><div class="section-head reveal"><span>Les kusudama et suspensions</span><h2>Refléter la lumière</h2><p>Des sculptures de papier où les cristaux reflètent la lumière en mille éclats.</p></div><div class="grid"><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="kusu-12-1.jpg" alt="Rose céleste — vue 1"></figure><figure class="slide"><img loading="lazy" src="kusu-12-2.jpg" alt="Rose céleste — vue 2"></figure><figure class="slide"><img loading="lazy" src="kusu-12-3.jpg" alt="Rose céleste — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Rose céleste</h3><p>Une sphère florale poudrée, ponctuée de perles et prolongée d’un gland de soie.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="kusu-13-1.jpg" alt="Jardin impérial — vue 1"></figure><figure class="slide"><img loading="lazy" src="kusu-13-2.jpg" alt="Jardin impérial — vue 2"></figure><figure class="slide"><img loading="lazy" src="kusu-13-3.jpg" alt="Jardin impérial — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Jardin impérial</h3><p>Des motifs japonais réunis en une sculpture dense, rythmée par des éclats rouges.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article><article class="creation-card reveal">
+      <div class="gallery" data-gallery>
+        <div class="slides"><figure class="slide"><img loading="lazy" src="kusu-14-1.jpg" alt="Éclats de gemmes — vue 1"></figure><figure class="slide"><img loading="lazy" src="kusu-14-2.jpg" alt="Éclats de gemmes — vue 2"></figure><figure class="slide"><img loading="lazy" src="kusu-14-3.jpg" alt="Éclats de gemmes — vue 3"></figure></div>
+        <button class="arrow prev" aria-label="Photo précédente">‹</button><button class="arrow next" aria-label="Photo suivante">›</button>
+        <div class="dots"><button class="dot active" aria-label="Afficher la photo 1"></button><button class="dot " aria-label="Afficher la photo 2"></button><button class="dot " aria-label="Afficher la photo 3"></button></div>
+      </div>
+      <div class="card-copy"><p class="eyebrow">Pièce façonnée à la main</p><h3>Éclats de gemmes</h3><p>Des fleurs profondes, bleues, vertes et prune, dont les cristaux accrochent chaque rayon.</p><p class="views">Vue d’ensemble · détail · lumière allumée</p></div>
+    </article></div></section><section class="manifesto reveal"><p>Chaque création porte la trace<br>du geste qui prend son temps.</p><a class="etsy-cta" href="https://orygamestudio.etsy.com" target="_blank" rel="noopener">Découvrir la boutique Etsy</a></section><footer><p><strong>LA MONAFACTURE</strong></p><p>La lumière pliée à la main.</p><p><a href="index.html">Retour à l’accueil</a></p></footer><script>document.querySelectorAll('[data-gallery]').forEach(g=>{let i=0;const s=g.querySelector('.slides'),d=[...g.querySelectorAll('.dot')],n=d.length;function show(x){i=(x+n)%n;s.style.transform=`translateX(-${i*100}%)`;d.forEach((e,j)=>e.classList.toggle('active',j===i))}g.querySelector('.next').onclick=()=>show(i+1);g.querySelector('.prev').onclick=()=>show(i-1);d.forEach((e,j)=>e.onclick=()=>show(j));let start=0;g.addEventListener('touchstart',e=>start=e.touches[0].clientX,{passive:true});g.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-start;if(Math.abs(dx)>45)show(i+(dx<0?1:-1))},{passive:true})});const obs=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));</script>
+</body></html>
