@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Découvrez les guirlandes lumineuses, suspensions florales et abat-jours artisanaux de LA MONAFACTURE, réalisés à la main en France.">
+  <title>Créations — LA MONAFACTURE</title>
+  <style>
+    :root{--ivory:#f6f1e8;--paper:#fffdf8;--ink:#29251f;--muted:#746c60;--gold:#b48a4b;--rose:#b06f74;--line:rgba(41,37,31,.14)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--ivory);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
+    a{color:inherit} img{display:block;width:100%}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(246,241,232,.93);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1180px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{text-decoration:none;letter-spacing:.16em;font-size:.96rem;font-weight:700}.navlinks{display:flex;gap:20px;align-items:center;font-family:Arial,sans-serif;font-size:.86rem}.navlinks a{text-decoration:none}.navlinks .shop{border:1px solid var(--ink);padding:9px 14px;border-radius:999px}
+    .hero{max-width:980px;margin:0 auto;padding:78px 24px 55px;text-align:center}.eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--gold)}
+    h1{font-weight:400;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.98;margin:.28em 0 .22em}.lead{max-width:680px;margin:0 auto;color:var(--muted);font-size:clamp(1.04rem,2vw,1.28rem)}
+    .section{max-width:1180px;margin:0 auto;padding:56px 24px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px;border-bottom:1px solid var(--line);padding-bottom:16px}
+    .section h2{font-size:clamp(2rem,4vw,3.45rem);font-weight:400;margin:0}.section-note{max-width:440px;color:var(--muted);font-size:.98rem}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}.card{grid-column:span 4;background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 12px 35px rgba(50,40,25,.06);transition:transform .25s ease,box-shadow .25s ease}.card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(50,40,25,.11)}
+    .card.featured{grid-column:span 8}.photo{aspect-ratio:4/5;overflow:hidden;background:#ddd}.featured .photo{aspect-ratio:16/10}.photo img{height:100%;object-fit:cover;transition:transform .5s ease}.card:hover img{transform:scale(1.025)}
+    .content{padding:20px 20px 22px}.kind{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.66rem;color:var(--gold)}h3{font-weight:400;font-size:1.55rem;margin:.28em 0 .35em}.desc{font-family:Arial,sans-serif;color:var(--muted);font-size:.92rem;margin:0 0 16px}
+    .cta{display:inline-flex;align-items:center;gap:8px;font-family:Arial,sans-serif;text-decoration:none;font-size:.84rem;border-bottom:1px solid var(--ink);padding-bottom:3px}
+    .manifesto{max-width:850px;margin:70px auto 30px;padding:58px 30px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.manifesto p{font-size:clamp(1.45rem,3.4vw,2.55rem);line-height:1.3;margin:0}.manifesto small{display:block;margin-top:18px;font-family:Arial,sans-serif;color:var(--muted)}
+    footer{padding:35px 24px 45px;text-align:center;font-family:Arial,sans-serif;color:var(--muted);font-size:.8rem}
+    @media(max-width:850px){.navlinks a:not(.shop){display:none}.section-head{display:block}.section-note{margin-top:10px}.card,.card.featured{grid-column:span 6}.featured .photo,.photo{aspect-ratio:4/5}}
+    @media(max-width:560px){.hero{padding-top:55px}.section{padding-top:42px}.card,.card.featured{grid-column:1/-1}.grid{gap:18px}.nav{padding-inline:16px}.brand{font-size:.82rem}.shop{font-size:.75rem}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="brand" href="index.html">LA MONAFACTURE</a>
+      <div class="navlinks">
+        <a href="#guirlandes">Guirlandes</a><a href="#suspensions">Suspensions</a><a href="#abat-jours">Abat-jours</a>
+        <a class="shop" href="https://orygamestudio.etsy.com" target="_blank" rel="noopener">Voir la boutique Etsy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Créations artisanales en papier et tissu</div>
+      <h1>La lumière pliée<br>à la main.</h1>
+      <p class="lead">Des pièces réalisées une à une, où le papier, le tissu et la lumière se répondent. Chaque modèle porte ses propres couleurs, ses propres détails et la trace du geste qui l’a façonné.</p>
+    </section>
+
+    <section class="section" id="guirlandes">
+      <div class="section-head"><div><div class="eyebrow">01</div><h2>Guirlandes lumineuses</h2></div><p class="section-note">Des fleurs de papier décoratives même éteintes, puis transformées lorsque la lumière les traverse.</p></div>
+      <div class="grid">
+        <article class="card featured"><div class="photo"><img src="assets/guirlande-tropicale.jpg" alt="Guirlande lumineuse aux grandes fleurs de papier colorées, allumée près d'une plante" loading="eager"></div><div class="content"><div class="kind">Guirlande lumineuse</div><h3>Jardin tropical</h3><p class="desc">Des fleurs généreuses, des couleurs franches et une lumière qui révèle le papier autrement.</p><a class="cta" href="https://orygamestudio.etsy.com" target="_blank" rel="noopener">Découvrir sur Etsy →</a></div></article>
+        <article class="card"><div class="photo"><img src="assets/guirlande-nocturne.jpg" alt="Détail d'une guirlande lumineuse florale aux teintes vertes et violettes" loading="lazy"></div><div class="content"><div class="kind">Guirlande lumineuse</div><h3>Jardin nocturne</h3><p class="desc">Une composition sombre et précieuse, ponctuée d’éclats dorés et de lumière chaude.</p><a class="cta" href="https://orygamestudio.etsy.com" target="_blank" rel="noopener">Découvrir sur Etsy →</a></div></article>
+        <article class="card"><div class="photo"><img src="assets/guirlande-crepuscule.jpg" alt="Guirlande lumineuse rouge et violette déployée sur un mur" loading="lazy"></div><div class="content"><div class="kind">Guirlande lumineuse</div><h3>Crépuscule</h3><p class="desc">Des rouges profonds et des violets intenses pour une lumière intime, presque théâtrale.</p><a class="cta" href="https://orygamestudio.etsy.com" target="_blank" rel="noopener">Découvrir sur Etsy →</a></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="suspensions">
+      <div class="section-head"><div><div class="eyebrow">02</div><h2>Suspensions florales</h2></div><p class="section-note">Des assemblages de fleurs pliées une à une, conçus comme de petits objets précieux à suspendre.</p></div>
+      <div class="grid">
+        <article class="card"><div class="photo"><img src="assets/kusudama-rose.jpg" alt="Suspension florale rose en papier avec pompon doré" loading="lazy"></div><div class="content"><div class="kind">Suspension florale</div><h3>Rose poudré</h3><p class="desc">Une composition douce, ponctuée de perles nacrées et d’un long pompon doré.</p><a class="cta" href="https://orygamestudio.etsy.com" target="_blank" rel="noopener">Découvrir sur Etsy →</a></div></article>
+        <article class="card featured"><div class="photo"><img src="assets/kusudama-jardin.jpg" alt="Suspension florale multicolore en papier avec cristaux" loading="lazy"></div><div class="content"><div class="kind">Suspension florale</div><h3>Jardin précieux</h3><p class="desc">Des fleurs aux nuances profondes, assemblées comme un bouquet suspendu et rehaussées d’éclats de lumière.</p><a class="cta" href="https://orygamestudio.etsy.com" target="_blank" rel="noopener">Découvrir sur Etsy →</a></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="abat-jours">
+      <div class="section-head"><div><div class="eyebrow">03</div><h2>Abat-jours</h2></div><p class="section-note">Des tissus choisis pour leur présence. Éteints, ils habillent la pièce ; allumés, ils en changent l’atmosphère.</p></div>
+      <div class="grid">
+        <article class="card"><div class="photo"><img src="assets/abat-jour-chrysantheme.jpg" alt="Abat-jour artisanal à grand chrysanthème blanc et galon noir" loading="lazy"></div><div class="content"><div class="kind">Abat-jour</div><h3>Chrysanthème</h3><p class="desc">Un motif monumental, encadré de noir, qui révèle toute sa finesse une fois éclairé.</p><a class="cta" href="https://orygamestudio.etsy.com" target="_blank" rel="noopener">Voir la boutique Etsy →</a></div></article>
+        <article class="card"><div class="photo"><img src="assets/abat-jour-elephants.jpg" alt="Abat-jour noir illustré d'éléphants et de végétation" loading="lazy"></div><div class="content"><div class="kind">Abat-jour</div><h3>Éléphants</h3><p class="desc">Une scène riche et narrative, soulignée par un galon brun aux reflets discrets.</p><a class="cta" href="https://orygamestudio.etsy.com" target="_blank" rel="noopener">Voir la boutique Etsy →</a></div></article>
+        <article class="card"><div class="photo"><img src="assets/abat-jour-jardin-bleu.jpg" alt="Abat-jour bleu à motif végétal avec finition rouge framboise" loading="lazy"></div><div class="content"><div class="kind">Abat-jour</div><h3>Jardin bleu</h3><p class="desc">Un bleu profond traversé de branches claires, réveillé par une finition framboise.</p><a class="cta" href="https://orygamestudio.etsy.com" target="_blank" rel="noopener">Voir la boutique Etsy →</a></div></article>
+      </div>
+    </section>
+
+    <section class="manifesto"><p>Chaque création porte la trace du geste qui prend son temps et qui suit la matière.<br>C’est ce qui la rend imparfaitement unique.</p><small>Créations réalisées à la main en France.</small></section>
+  </main>
+  <footer>© 2026 LA MONAFACTURE · <a href="index.html">Retour à l’accueil</a> · Les ventes et prises de contact sont actuellement gérées sur Etsy.</footer>
+</body>
+</html>
