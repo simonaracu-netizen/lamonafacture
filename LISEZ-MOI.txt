@@ -1,0 +1,10 @@
+MISE EN LIGNE — LA MONAFACTURE
+
+1. Décompresser lamonafacture-fichiers-separes.zip sur votre ordinateur.
+2. Ouvrir le dépôt GitHub qui publie lamonafacture.fr, à l'emplacement actuel de index.html et creations.html.
+3. Importer le CONTENU du dossier décompressé : index.html, creations.html et tous les fichiers .webp, directement à ce niveau. Ne pas envoyer le ZIP seul ni créer un dossier supplémentaire autour des images.
+4. Valider la modification et attendre la publication GitHub Pages.
+5. Vérifier les pages https://lamonafacture.fr/ et https://lamonafacture.fr/creations.html#abat ; si une ancienne version s'affiche, recharger sans cache.
+
+Garder les autres fichiers déjà présents dans le dépôt, notamment CNAME, robots.txt et sitemap.xml.
+Les deux fichiers HTML sont légers ; toutes les photos sont séparées et leurs noms correspondent aux références dans les pages.
