@@ -8,3 +8,5 @@ MISE EN LIGNE — LA MONAFACTURE
 
 Garder les autres fichiers déjà présents dans le dépôt, notamment CNAME, robots.txt et sitemap.xml.
 Les deux fichiers HTML sont légers ; toutes les photos sont séparées et leurs noms correspondent aux références dans les pages.
+
+IMPORTANT : pour rétablir Bouquet de roses, importer également bouquet-de-roses-vue-1.webp, bouquet-de-roses-vue-2.webp et bouquet-de-roses-vue-3.webp à la racine du dépôt. Les trois nouveaux more-drama-please-*.webp doivent aussi remplacer les anciens fichiers du même nom. Respecter exactement les noms et les minuscules.
