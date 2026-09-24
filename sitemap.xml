@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://lamonafacture.fr/</loc>
+  </url>
+
+  <!-- ═══════════════════════════════════════════
+       PAGES CATÉGORIES — À DÉCOMMENTER
+       quand elles seront en ligne (retire juste
+       les <!- - et - -> autour des blocs)
+       ═══════════════════════════════════════════ -->
+
+  <!-- Guirlandes lumineuses
+  <url>
+    <loc>https://lamonafacture.fr/guirlandes-lumineuses</loc>
+  </url>
+  -->
+
+  <!-- Abat-jours & lampes
+  <url>
+    <loc>https://lamonafacture.fr/abat-jours-lampes</loc>
+  </url>
+  -->
+
+  <!-- Suspensions florales
+  <url>
+    <loc>https://lamonafacture.fr/suspensions-florales</loc>
+  </url>
+  -->
+
+</urlset>
